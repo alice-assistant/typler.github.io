@@ -8,6 +8,29 @@ $(document).ready(function() {
 		'background-size' : 'cover',
 	});
 	
+		$('.navoption').click(function()  {
+		$('.changer').removeClass('optionbar');
+		$('.changer').addClass('release');
+		
+	});
+	
+	$('.fa-times').click(function() {
+		$('.changer').addClass('optionbar');
+		$('.changer').removeClass('release');
+		
+	});
+	
+	
+	
+	
+	
+	setInterval(function() {
+		date();
+	}, 1000);
+	date();
+	
+	
+	
 	function date() {
 		
 		var time = document.getElementById('time');
@@ -91,25 +114,6 @@ function weather(){
 
 weather()
 	
-	$('.navoption').click(function()  {
-		$('.changer').removeClass('optionbar');
-		$('.changer').addClass('release');
-		
-	});
-	
-	$('.fa-times').click(function() {
-		$('.changer').addClass('optionbar');
-		$('.changer').removeClass('release');
-		
-	});
-	
-	
-	
-	
-	
-	setInterval(function() {
-		date();
-	}, 1000);
-	date();
+
 
 });
