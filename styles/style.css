@@ -65,7 +65,7 @@ overflow: hidden;
   }
   
   .weather {
-	  margin-top: 250px;
+	  margin-top: 10vw;
 	  color: white;
 	  background-color: rgba(0, 0, 0, 0.6);
 	  border-radius: 15px;
@@ -86,21 +86,21 @@ overflow: hidden;
   }
   
   .optionbar {
-	  height: 450px;
+	  height: 600px;
 	  width: 100%;
 	  background-color: white;
 	  position: fixed;
 	  z-index: 10000000000;
-	  margin-top: 500px;
+	  margin-top: 250vw;
   }
 
 .release {
-	height: 450px;
+	height: 600px;
 	  width: 100%;
 	  background-color: white;
 	  position: fixed;
 	  z-index: 10000000000;
-	  margin-top: 20px;
+	  margin-top: 10vw;
 }
 
 .fa-times {
@@ -117,4 +117,8 @@ overflow: hidden;
 
 #warning {
 	font-size: 16px;
+}
+
+.darksky {
+	
 }

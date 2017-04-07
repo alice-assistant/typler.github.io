@@ -30,7 +30,7 @@ $(document).ready(function() {
 
 	
 	
-	function render(wd) {
+ 	function render(wd) {
 	var currentLocation = wd.name;
 	
 	var weatherr = wd.weather[0].description;
@@ -67,7 +67,7 @@ $(document).ready(function() {
 	$('#icontop').html('<img class="icontop" src="' + iconsrc + '">');
 	}
 
-var API_KEY = "d1a21bccdabbdd9bf5fad7bc2ec65561";
+var K = "d1a21bccdabbdd9bf5fad7bc2ec65561";
 var cel = false;
 function weather(){
 
@@ -78,7 +78,7 @@ function weather(){
 
     
     $.getJSON('http://api.openweathermap.org/data/2.5/weather?units=imperial&lat=' 
-              + loc[0] + '&lon=' + loc[1] +'&APPID=' + API_KEY, function(apiData){
+              + loc[0] + '&lon=' + loc[1] +'&APPID=' + K, function(apiData){
       wd = apiData;
       
       render(apiData);
@@ -101,10 +101,43 @@ weather()
 		$('.changer').addClass('optionbar');
 		$('.changer').removeClass('release');
 		
+	}); 
+	
+	
+	/*var wd;
+	
+	render(wd) {
+		
+		
+	}
+	
+	function weather() {
+	var lat = '';
+	var lon = '';
+		var key = '9bc8dc3e135d00e075fd0eb662364e19';
+		
+	function showlocation() {
+   // One-shot position request.
+   navigator.geolocation.getCurrentPosition(callback);
+	}
+
+	function callback(position) {
+   lat = position.coords.latitude;
+   lon = position.coords.longitude;
+	}
+	showlocation();	
+		
+		
+	$.getJSON("https://api.darksky.net/forecast/" + key + "/" + lat +" ," + lon +"?units=us", function(apidata) {
+		wd = apidata;
+		render(wd);
 	});
+		
+
+		
+	}
 	
-	
-	
+	weather(); */
 	
 	
 	setInterval(function() {
