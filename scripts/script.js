@@ -8,29 +8,6 @@ $(document).ready(function() {
 		'background-size' : 'cover',
 	});
 	
-		$('.navoption').click(function()  {
-		$('.changer').removeClass('optionbar');
-		$('.changer').addClass('release');
-		
-	});
-	
-	$('.fa-times').click(function() {
-		$('.changer').addClass('optionbar');
-		$('.changer').removeClass('release');
-		
-	});
-	
-	
-	
-	
-	
-	setInterval(function() {
-		date();
-	}, 1000);
-	date();
-	
-	
-	
 	function date() {
 		
 		var time = document.getElementById('time');
@@ -85,7 +62,7 @@ $(document).ready(function() {
 	cloude.innerHTML = currentCloud;
 	desce.innerHTML = currentWeather;
 	var iconsrc = "http://openweathermap.org/img/w/" +  icon + ".png";
-
+	$("#warning").fadeOut();
 	$('#icon').html('<img class="icon" src="' + iconsrc + '">');
 	$('#icontop').html('<img class="icontop" src="' + iconsrc + '">');
 	}
@@ -114,6 +91,25 @@ function weather(){
 
 weather()
 	
-
+	$('.navoption').click(function()  {
+		$('.changer').removeClass('optionbar');
+		$('.changer').addClass('release');
+		
+	});
+	
+	$('.fa-times').click(function() {
+		$('.changer').addClass('optionbar');
+		$('.changer').removeClass('release');
+		
+	});
+	
+	
+	
+	
+	
+	setInterval(function() {
+		date();
+	}, 1000);
+	date();
 
 });
